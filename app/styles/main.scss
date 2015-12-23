@@ -3,4 +3,9 @@ $fa-font-path:   "../bower_components/fontawesome/fonts";
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss",
-        "fontawesome/scss/font-awesome.scss";
+        "fontawesome/scss/font-awesome.scss",
+        "base/all",
+        "module/all",
+        "state/all",
+        "layout/all",
+        "theme/all";
