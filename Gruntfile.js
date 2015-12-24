@@ -427,6 +427,12 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '.',
+          src: ['bower_components/fontawesome/fonts/*.*'],
+          dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
@@ -452,14 +458,6 @@ module.exports = function (grunt) {
       ]
     },
 
-    // Test settings
-    karma: {
-      unit: {
-        configFile: 'test/karma.conf.js',
-        singleRun: true
-      }
-    },
-
     buildcontrol: {
       options: {
         dir: 'dist',
@@ -469,7 +467,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'git@heroku.com:calm-ridge-3350.git',
+          remote: 'git@heroku.com:morning-stream-8637.git',
           branch: 'master',
           tag: pkg.version
         }
