@@ -478,6 +478,14 @@ module.exports = function (grunt) {
           branch: 'build'
         }
       }
+    },
+
+    // Test settings
+    karma: {
+      unit: {
+        configFile: 'test/karma.conf.js',
+        singleRun: true
+      }
     }
   });
 
@@ -501,6 +509,8 @@ module.exports = function (grunt) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);
   });
+
+  grunt.loadNpmTasks('grunt-build-control');
 
   grunt.registerTask('test', [
     'clean:server',
