@@ -1,21 +1,21 @@
 
 @mixin text-align($screen) {
-  .h-text-{$screen}-left { text-align: left; }
-  .h-text-{$screen}-right { text-align: right; }
-  .h-text-{$screen}-center { text-align: center; }
-  .h-text-{$screen}-justify { text-align: justify; }
+  .h-text-#{$screen}-left { text-align: left; }
+  .h-text-#{$screen}-right { text-align: right; }
+  .h-text-#{$screen}-center { text-align: center; }
+  .h-text-#{$screen}-justify { text-align: justify; }
 }
 
 @media (min-width: $screen-sm-min) {
-  @include text-align: (sm);
+  @include text-align(sm);
 }
 
 @media (min-width: $screen-md-min) {
-  @include include text-align: (md);;
+  @include text-align(md);
 }
 
 @media (min-width: $screen-lg-min) {
-  @include include text-align: (lg);;
+  @include text-align(lg);
 }
 
 
